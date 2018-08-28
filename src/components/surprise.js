@@ -11,13 +11,10 @@ export default class Surprise extends React.Component {
         }
     }
 
-    onClick
-
-
-//if showImage is false, render the page showing the button, otherwise render the page showing the image
+    // if showImage is false, render the page showing the button, otherwise render the page showing the image
 render() {
     if (!this.state.showingImage) {
-        return <SurpriseButton />;
+        return <SurpriseButton handleClick={() => this.setState({showingImage: true})} />;
         };
 
     return <SurpriseImage />;
